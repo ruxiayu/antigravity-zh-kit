@@ -67,7 +67,7 @@ chmod +x install.sh
 
 ---
 
-## 装完怎么用？（直接说人话就行）
+## 装完怎么用？
 
 * **自动中文标题（`chinese-summary`）**：不用管它！装完规则后，以后每开一个新对话都会自动起中文名。
 * **整理左侧会话（`session-organizer`）**：直接对 Antigravity 说：
