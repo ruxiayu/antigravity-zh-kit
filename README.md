@@ -117,6 +117,12 @@ antigravity-zh-kit/
 
 ---
 
+## 后续更新与交流
+
+后续如果打磨出新的实用技能或顺手的规则，都会陆续补充到本仓库中；如果你有好点子、使用建议，或者遇到了什么问题，也欢迎在 [Issues](https://github.com/ruxiayu/antigravity-zh-kit/issues) 里留言讨论！
+
+---
+
 ## 开源协议
 
 基于 [MIT License](LICENSE) 开源，欢迎 Star、Fork 和分享给身边的朋友！
