@@ -15,6 +15,18 @@ def _resolve_base_dir() -> str:
     env_home = os.environ.get("ANTIGRAVITY_HOME")
     if env_home:
         return os.path.abspath(os.path.expanduser(env_home))
+    # Auto-detect from script location: <any-drive>/.../.gemini/config/skills/session-organizer/scripts/organize_sessions.py
+    inferred_gemini = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
+    inferred_ag = os.path.join(inferred_gemini, "antigravity")
+    if os.path.isfile(os.path.join(inferred_ag, "conversation_summaries.db")) or os.path.isdir(
+        os.path.join(inferred_ag, "annotations")
+    ):
+        return inferred_ag
+    gemini_home = os.environ.get("GEMINI_HOME")
+    if gemini_home:
+        cand = os.path.join(os.path.abspath(os.path.expanduser(gemini_home)), "antigravity")
+        if os.path.isdir(cand):
+            return cand
     return os.path.join(os.path.expanduser("~"), ".gemini", "antigravity")
 
 

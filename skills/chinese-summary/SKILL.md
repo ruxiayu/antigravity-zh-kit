@@ -28,5 +28,6 @@ python3 "$HOME/.gemini/config/skills/chinese-summary/scripts/set_title.py" --cid
 
 * `--cid`：从系统提示词 `<user_information>` 中的 `Conversation ID` 获取。
 * `--title`：4~10 字中文标题。
-* `--home`（可选）：如果自定义了 Antigravity 数据目录，可通过 `--home <路径>` 或环境变量 `ANTIGRAVITY_HOME` 指定（默认自动使用 `~/.gemini/antigravity`）。
+* `--home`（可选）：脚本会自动探测当前 Antigravity 数据目录（无论安装或迁移在哪个磁盘）；如确需手动指定，可传入 `<user_information>` 中的 `App Data Directory` 或设置环境变量 `ANTIGRAVITY_HOME`。
+* **路径定位**：调用时优先使用本 `SKILL.md` 同级目录下的 `scripts/set_title.py`，兼容任意自定义安装路径。
 * 脚本仅依赖 Python 3 标准库，写入后无需重启客户端即可生效。
